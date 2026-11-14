@@ -26,7 +26,7 @@ window.fetchThumbnails = function() {
   const container = document.getElementById('thumbnailResults');
 
   if (!videoId) {
-    alert('দয়া করে সঠিক YouTube ভিডিও বা Shorts লিঙ্ক প্রদান করুন!');
+    alert('Please enter a valid YouTube video or Shorts link!');
     return;
   }
 
@@ -44,7 +44,7 @@ window.fetchThumbnails = function() {
         <img src="${imgUrl}" alt="${q.name}" onerror="this.src='https://img.youtube.com/vi/${videoId}/hqdefault.jpg'">
         <div class="thumbnail-info">
           <span>${q.name}</span>
-          <a href="${imgUrl}" target="_blank" download class="btn-download-sm"><i class="fa-solid fa-download"></i> ওপেন / সেভ</a>
+          <a href="${imgUrl}" target="_blank" download class="btn-download-sm"><i class="fa-solid fa-download"></i> Download HD</a>
         </div>
       </div>
     `;
@@ -69,7 +69,7 @@ const hooksDatabase = {
     "ধনী ব্যক্তিরা টাকা খরচ করার আগে যে গোল্ডেন নিয়ম মেনে চলে!"
   ],
   motivation: [
-    "যদি আপনি জীবনে পিছিয়ে পড়ছেন মনে হয়, তবে এই ৩০ সেকেন্ড আপনার জন্য!",
+    "যদি আপনি জীবনে পিছিয়ে পড়ছেন মনে হয়, তবে এই ৩০ Seconds আপনার জন্য!",
     "মানুষ তখন আপনার মূল্য বুঝবে যখন আপনি নিজেকে সময় দেবেন।",
     "সাফল্যের একমাত্র সিক্রেট যা আপনাকে কেউ বলবে না!"
   ]
@@ -82,12 +82,12 @@ window.generateHooks = function() {
 
   resultDiv.innerHTML = `
     <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 12px; padding: 1.25rem;">
-      <h4 style="color: #c4b5fd; margin-bottom: 0.75rem;"><i class="fa-solid fa-fire"></i> ৩টি ভাইরাল হুক স্ক্রিপ্ট:</h4>
+      <h4 style="color: #c4b5fd; margin-bottom: 0.75rem;"><i class="fa-solid fa-fire"></i> Top 3 High-Retention Video Hooks:</h4>
       <ol style="padding-left: 1.25rem; line-height: 1.8;">
         ${list.map(h => `<li style="margin-bottom: 8px;"><strong>"${h}"</strong></li>`).join('')}
       </ol>
       <div style="margin-top: 1rem; font-size: 0.85rem; color: #94a3b8;">
-        💡 <em>টিপ: ভিডিওর প্রথম ৩ সেকেন্ডে এই হুকটি জোরে এবং আত্মবিশ্বাসের সাথে বলুন।</em>
+        💡 <em>Tip: Deliver this hook confidently in the first 3 seconds of your video.</em>
       </div>
     </div>
   `;
@@ -130,7 +130,7 @@ window.copyAllTags = function() {
   const badges = document.querySelectorAll('.tag-badge');
   const text = Array.from(badges).map(b => b.innerText).join(' ');
   navigator.clipboard.writeText(text).then(() => {
-    alert('সমস্ত ট্যাগ ও হ্যাশট্যাগ ক্লিপবোর্ডে কপি হয়েছে!');
+    alert('All tags and hashtags copied to clipboard!');
   });
 };
 
@@ -144,15 +144,15 @@ if (scriptText) {
     const seconds = Math.round(wordCount / 2.3);
 
     document.getElementById('wordCountDisplay').innerText = wordCount;
-    document.getElementById('durationDisplay').innerText = seconds + ' সেকেন্ড';
+    document.getElementById('durationDisplay').innerText = seconds + ' Seconds';
 
     const statusEl = document.getElementById('shortStatus');
     if (seconds <= 30) {
-      statusEl.innerHTML = '<span style="color: #10b981;">✓ পারফেক্ট ৩০-সেকেন্ড শর্টস / রিলস</span>';
+      statusEl.innerHTML = '<span style="color: #10b981;">✓ Ideal 30-Second Short / Reel</span>';
     } else if (seconds <= 60) {
-      statusEl.innerHTML = '<span style="color: #f59e0b;">✓ ৬০-সেকেন্ড পূর্ণ শর্টস</span>';
+      statusEl.innerHTML = '<span style="color: #f59e0b;">✓ 60-Second Full Short</span>';
     } else {
-      statusEl.innerHTML = '<span style="color: #ef4444;">⚠ শর্টস হিসেবে বড় (লং ভিডিওর জন্য উপযুক্ত)</span>';
+      statusEl.innerHTML = '<span style="color: #ef4444;">⚠ Long form content (over 60s)</span>';
     }
   });
 }
