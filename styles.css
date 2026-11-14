@@ -341,3 +341,37 @@ body {
 .footer-links a:hover {
   color: #c4b5fd;
 }
+
+
+/* Global Language Translator Widget Styling */
+#google_translate_element {
+  display: inline-flex;
+  align-items: center;
+}
+.goog-te-gadget-simple {
+  background-color: rgba(30, 41, 59, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  cursor: pointer !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value {
+  color: #f8fafc !important;
+}
+.goog-te-gadget-simple .goog-te-menu-value span {
+  color: #f8fafc !important;
+  border-left: none !important;
+}
+.goog-te-gadget-icon {
+  display: none !important;
+}
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
